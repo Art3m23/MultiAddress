@@ -1,6 +1,7 @@
 .container-field {
   font-family: 'Rubik', sans-serif;
   font-style: normal;
+
 }
 
 .bg-container {
@@ -35,7 +36,8 @@
 }
 
 .modal_address,
-.modal_remove {
+.modal_remove,
+.modal_change {
   display: none;
   position: fixed;
   top: 0;
@@ -67,19 +69,21 @@
   outline: 0;
 }
 
-.modal_remove-text{
+.modal_remove-text {
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
 }
 
 .close,
-.close-remove {
+.close-remove,
+.close-change {
   justify-content: flex-end;
 }
 
 .close, .close:hover, .close:focus,
-.close-remove, .close-remove:hover, .close-remove:focus {
+.close-remove, .close-remove:hover, .close-remove:focus,
+.close-change, .close-change:hover, .close-change:focus {
   display: inline-block;
   border: 0;
   padding: 0 12px;
@@ -126,29 +130,29 @@
 .btn-card {
   background: linear-gradient(90deg, #fdd446 0%, #f79b47 100%);
   border-radius: 25px;
-  padding: 5px 60px;
+  padding: 5px 40px;
   font-size: 14px;
   border: 0;
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 32px;
   background-image: url(./images/male-icon.svg);
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 20px;
+  background-size: 15px;
 }
 
 .card-subtitle {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 20px;
   background-image: url(./images/maps-pin-black-icon.svg);
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 20px;
+  background-size: 15px;
 }
 
 .btn-cancel {
@@ -164,4 +168,47 @@
   padding: 5px 10px;
   font-size: 14px;
   border: 0;
+}
+
+.modal_change .btn-modal {
+  padding: 5px 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 720px) {
+  .title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .btn-card {
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+
+  
+
+  .form-outline-modal {
+    padding: 10px 8%;
+  }
+}
+
+@media (max-width: 380px) {
+  .modal_change .btn-modal {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
+
+  .modal_change h2,
+  .modal_address h2 {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }

@@ -22,7 +22,7 @@
 <body>
   <div class="container-field">
     <div class="bg-container"></div>
-    <h1 class="text-center text-uppercase title">Адреса Доставки</h1>
+    <h1 class="text-center text-uppercase title px-2">Адреса Доставки</h1>
     <div class="text-center add-address p-4">
       <a href="#add-new-address">
         <button type="submit" class="mb-4 btn-add">Добавить</button>
@@ -30,7 +30,7 @@
     </div>
     <main class="w100">
       <div class="container">
-        <div class="row g-4 row-cols-1 row-cols-lg-2 row-cols-xl-3"></div>
+        <div class="row g-4 row-cols-1 row-cols-lg-2 row-cols-xl-3 pb-4"></div>
       </div>
     </main>
     <div id="add-new-address" class="modal_address">
@@ -40,7 +40,6 @@
             <a href="#" class="close"><i class="fa fa-times" aria-hidden="true"></i></a>
             <form class="new-address">
               <h2 class="text-center" id="modalTitle">Добавьте адрес доставки</h2>
-
               <div id="AddressAddInput" class="mb-4">
                 <div class="form-outline form-outline-modal">
                   <input type="text" class="form-control form-control-modal add-address-input" id="AddCountry"
@@ -74,9 +73,8 @@
                     placeholder="Номер телефона">
                 </div>
               </div>
-
-              <div class="form-outline form-outline-modal d-flex align-item-center justify-content-center">
-                <button type="submit" class="btn btn-modal mb-4" id="AddAddressBtn">Добавить</button>
+              <div class="form-outline form-outline-modal text-center pb-4">
+                <button type="submit" class="btn btn-modal" id="AddAddressBtn">Добавить</button>
               </div>
             </form>
           </div>
@@ -91,12 +89,61 @@
             <p class="modal_remove-text">Вы точно хотите удалить адрес?</p>
             <div class="container-btn d-flex justify-content-start">
               <a href="#">
-                <button type="submit" class="btn btn-cancel">Отмена</button>
+                <button type="submit" class="btn-cancel">Отмена</button>
               </a>
               <a href="#">
-                <button type="submit" class="btn btn-ok ms-4">ОК</button>
+                <button type="submit" class="btn-ok ms-4">ОК</button>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="change-address" class="modal_change">
+      <div class="modal_address-dialog">
+        <div class="modal_address-content">
+          <div class="modal_address-body">
+            <a href="#" class="close-change"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <form class="change-address">
+              <h2 class="text-center" id="modalTitle">Измените адрес доставки</h2>
+              <div id="AddressChangeInput" class="mb-4">
+                <div class="form-outline form-outline-modal">
+                  <input type="text" class="form-control form-control-modal change-address-input" id="ChangeCountry"
+                    placeholder="Страна">
+                </div>
+                <div class="form-outline form-outline-modal">
+                  <input type="text" class="form-control form-control-modal change-address-input" id="ChangeRegion"
+                    placeholder="Край/Область/Регион">
+                </div>
+                <div class="form-outline form-outline-modal">
+                  <input type="text" class="form-control form-control-modal change-address-input" id="ChangeCity"
+                    placeholder="Город">
+                </div>
+                <div class="form-outline form-outline-modal">
+                  <input type="text" class="form-control form-control-modal change-address-input" id="ChangeAddress"
+                    placeholder="Улица, дом и квартира">
+                </div>
+                <div class="form-outline form-outline-modal">
+                  <input type="text" class="form-control form-control-modal change-address-input" id="ChangePostcode"
+                    placeholder="Индекс">
+                </div>
+              </div>
+              <div id="RecipientChangeInput">
+                <h3 class="text-center">Получатель</h3>
+                <div class="form-outline form-outline-modal">
+                  <input type="text" class="form-control form-control-modal change-address-input" id="ChangeContactName"
+                    placeholder="Фамилия Имя Отчество">
+                </div>
+                <div class="form-outline form-outline-modal">
+                  <input type="tel" class="form-control form-control-modal change-address-input" id="ChangeRegion"
+                    placeholder="Номер телефона">
+                </div>
+              </div>
+              <div class="form-outline form-outline-modal text-center pb-4 d-flex justify-content-between">
+                <button type="button" class="btn btn-modal btn-cancel-change" id="CancelAddressBtn">Отмена</button>
+                <button type="submit" class="btn btn-modal" id="ChangeAddressBtn">Изменить</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
